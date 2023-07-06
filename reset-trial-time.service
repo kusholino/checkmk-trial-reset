@@ -1,0 +1,9 @@
+[Unit]
+Description=Checks if the Trial Time exceeded a set Time
+
+[Service]
+ExecStart=/usr/bin/python3 /root/checkmk-trial-reset/reset-trial-time.py
+WorkingDirectory=/root/checkmk-trial-reset
+
+[Install]
+WantedBy=default.target
