@@ -1,5 +1,5 @@
 import subprocess
-from colors import colors
+from colors import green, red, reset
 def createSite():
 	subprocess.run(["omd", "create", "test"])
 	print("Created New Site ...", green+"OK", reset)
