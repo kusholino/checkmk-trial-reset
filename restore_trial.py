@@ -18,7 +18,7 @@ def main(site, host):
                 file.write(site)
 
                 createSite()
-                copyFile(site)
+                copyFile()
                 rmSite()
  
         else:
