@@ -1,9 +1,9 @@
 import subprocess
-from colors import colors
+from colors import red, green, reset
 
 def createSite():
 	subprocess.run(["omd", "create", "test"])
-	print("Created New Site ...", colors.green+"OK", colors.reset)
+	print("Created New Site ...", green+"OK", reset)
 		
 def copyFile():
     file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
@@ -11,7 +11,7 @@ def copyFile():
 
     #copy the Time File
     subprocess.run(["cp", "-r", file_source, file_destination])
-    print("Replaced File ......", colors.green+"OK", colors.reset)
+    print("Replaced File ......", green+"OK", reset)
 
 def rmSite():
 	command = f'omd rm test'
@@ -21,10 +21,10 @@ def rmSite():
 	process.communicate(input=confirmation.encode())
 
 	if process.returncode == 0:
-		print("Removed Site .......", colors.green+"OK", colors.reset)
+		print("Removed Site .......", green+"OK", reset)
 		subprocess.run(["omd", "restart", "sec"])
-		print("Restarted Site .....", colors.green+"OK", colors.reset)
-		print(green+"Successfully Reset Trial Time", colors.reset)   
+		print("Restarted Site .....", green+"OK", reset)
+		print(green+"Successfully Reset Trial Time", reset)   
 	else:
-		print("Removed Site .......", colors.red+"Error", colors.reset)
-		print(colors.red+"Error Reseting the Trial Time")
+		print("Removed Site .......", red+"Error", reset)
+		print(red+"Error Reseting the Trial Time")
