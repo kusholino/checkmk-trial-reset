@@ -9,7 +9,7 @@ from scrapeSite import scrapeWeb
 
 def main(site, host, trash):
     print(bann)
-    scrapeWeb()
+    scrapeWeb(host, site)
     print(remaining_time)
     print("Version:", foot_text)
 

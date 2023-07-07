@@ -10,13 +10,14 @@ def scrapeWeb():
 	remaining_times = [element.get_text() for element in remaining_time_elements]
 	
 	for remaining_time in remaining_times: #saves into remaining_time
+
+		with open(time, 'w') as file:
+				file.write(remaining_time)
+				
+		soup = BeautifulSoup(response.content, 'html.parser')
+
+		foot_element = soup.find(id="foot")
+
+		if foot_element:
+			foot_text = foot_element.get_text() #saves into foot_text
 	
-	with open(time, 'w') as file:
-		file.write(remaining_time)
-
-	soup = BeautifulSoup(response.content, 'html.parser')
-
-	foot_element = soup.find(id="foot")
-
-	if foot_element:
-    foot_text = foot_element.get_text() #saves into foot_text
