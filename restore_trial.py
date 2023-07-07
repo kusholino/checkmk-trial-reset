@@ -4,7 +4,6 @@ import argparse
 from bs4 import BeautifulSoup
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
-from colors import colors
 from scrapeSite import scrapeWeb
 
 def main(site, host):
