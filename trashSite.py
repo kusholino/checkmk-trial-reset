@@ -4,7 +4,7 @@ from colors import red, green, reset
 def createSite():
 	subprocess.run(["omd", "create", "test"])
 	print("Created New Site ...", green+"OK", reset)
-		
+	subprocess.run(["omd", "start", "test"])
 def copyFile(site):
     file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
     file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
