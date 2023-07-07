@@ -1,4 +1,5 @@
 def scrapeWeb():
+	time = "time"
 	scrape_url = f'http://{host}/{site}/check_mk/login.py'
 	response = requests.get(scrape_url)
 
