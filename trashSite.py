@@ -1,17 +1,19 @@
+import subprocess
+from colors import colors
 def createSite():
-	subprocess.run(["omd", "create", {trash}])
+	subprocess.run(["omd", "create", "test"])
 	print("Created New Site ...", green+"OK", reset)
 		
 def copyFile():
     file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
-    file_source = f'/omd/sites/{trash}/var/check_mk/licensing/state_file_created'
+    file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
 
     #copy the Time File
     subprocess.run(["cp", "-r", file_source, file_destination])
     print("Replaced File ......", green+"OK", reset)
 
 def rmSite():
-	command = f'omd rm {trash}'
+	command = f'omd rm test'
 	confirmation = 'yes\n'
 
 	process = subprocess.Popen(command, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
