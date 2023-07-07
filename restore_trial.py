@@ -1,7 +1,4 @@
-import subprocess
-import requests
 import argparse
-from bs4 import BeautifulSoup
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from scrapeSite import scrapeWeb
