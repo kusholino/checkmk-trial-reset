@@ -2,13 +2,13 @@ import subprocess
 import requests
 import argparse
 from bs4 import BeautifulSoup
-from banner import banner
+from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from colors import colors
 from scrapeSite import scrapeWeb
 
 def main(site, host, trash):
-    print(banner)
+    print(bann)
     scrapeWeb()
     print(remaining_time)
     print("Version:", foot_text)
