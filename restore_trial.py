@@ -21,6 +21,8 @@ def main(site, host):
                 time.sleep(1)
                 copyFile(site)
                 rmSite()
+                number = scrapeWeb(host, site)
+                print("Remaining Time:", number+reset)
                  
         else:
             print("No Host/IP was given. Use -H or --host")
