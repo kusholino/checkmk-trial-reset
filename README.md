@@ -24,7 +24,7 @@ Please note that Checkmk Trial Reset should only be used for testing or evaluati
 
 ## Installation with Service
 
-The Service checks if the Remaining time fell below 15 days. If it did i automatically runs the script to reset the Timer.
+The Service checks if the Remaining time fell below 15 days. If it did it automatically runs the script to reset the Timer.
 **Note:** Run the Script normally atleast once so the service has the Informations it needs. (local site name and the time)
 
 1. Clone the repository:
@@ -48,11 +48,3 @@ This tool is provided for educational and testing purposes only. Use it responsi
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements please open an issue or submit a pull request.
-
-## Contact
-
-If you have any questions or need assistance, feel free to contact the me:
-
-**Email**: joachim.stoeckeler@outlook.com
-
-Feel free to reach out with any questions, suggestions or bug reports.
