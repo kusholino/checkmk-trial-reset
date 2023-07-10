@@ -6,4 +6,6 @@ def update():
     subprocess.run(["git", "clone", repo, repo_dir], check=True)
     subprocess.run(["git", "-C", repo_dir, "fetch"], check=True)
     subprocess.run(["git", "-C", repo_dir, "merge", "origin/master"], check=True)
+
+update()
     

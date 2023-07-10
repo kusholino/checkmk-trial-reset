@@ -45,7 +45,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 Use the following command to update the script.
 
-`python3 restore_trial.py -u`
+`python3 update.py`
 
 ## Disclaimer
 
