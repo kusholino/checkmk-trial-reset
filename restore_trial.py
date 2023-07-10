@@ -2,11 +2,12 @@ import argparse
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from scrapeSite import scrapeWeb
+from version import version
 
 def main(site, host):
     print(bann)
-    #scrapeWeb(host, site)
-    print(scrapeWeb(host, site))
+    print("Remaining Trial Time:", scrapeWeb(host, site))
+    print("Version:", version)
 
     if site:
         if host:
@@ -17,7 +18,7 @@ def main(site, host):
                 createSite()
                 copyFile(site)
                 rmSite()
- 
+                 
         else:
             print("No Host/IP was given. Use -H or --host")
     else:

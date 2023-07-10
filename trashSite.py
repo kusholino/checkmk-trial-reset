@@ -3,12 +3,14 @@ from colors import red, green, reset
 
 def createSite():
 	try:
+		#creating the one time site
 		subprocess.run(["omd", "create", "test"], capture_output=True, text=True, check=True)
 		print("Created New Site ...", green+"OK", reset)
 	except subprocess.CalledProcessError as e:
 		print(red+"Error Creating Site...Error Code:",reset, e)
 
 	try:
+		#starting the one time site
 		subprocess.run(["omd", "start", "test"], capture_output=True, text=True, check=True)
 	except subprocess.CalledProcessError as e:
 		print(red+"Error starting Site...Error Code:",reset, e)
@@ -18,11 +20,18 @@ def copyFile(site):
 	file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
 	
 	try:
+		#replacing the stae_file_created file
 		subprocess.run(["cp", "-r", file_source, file_destination], capture_output=True, text=True, check=True)
 		print("Replaced File ......", green+"OK", reset)
+
+		#give the site user the permission to write and read from the replaced file
+		subprocess.run(["chown", site, file_destination], capture_output=True, text=True, check=True) 
+		print("Gave Permisions ......", green+"OK", reset)
     
 	except subprocess.CalledProcessError as e:
 		print(red+"Error Replacing File ... Error Code:",reset, e)
+
+
     
     
 

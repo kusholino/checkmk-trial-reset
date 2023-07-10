@@ -10,8 +10,9 @@ with open(time, 'r') as file:
     time = file.read()
 
 trash = 'test'
-print(time)
-if time is False:
+print("Remaining Trial Time:", time)
+
+if time == "15 days":
     createSite(trash)
     copyFile(site, trash)
     rmSite(trash)
