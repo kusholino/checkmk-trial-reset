@@ -6,12 +6,14 @@ def createSite():
 		#creating the one time site
 		subprocess.run(["omd", "create", "test"], capture_output=True, text=True, check=True)
 		print("Created New Site ...", green+"OK", reset)
+
 	except subprocess.CalledProcessError as e:
 		print(red+"Error Creating Site...Error Code:",reset, e)
 
 	try:
 		#starting the one time site
 		subprocess.run(["omd", "start", "test"], capture_output=True, text=True, check=True)
+		
 	except subprocess.CalledProcessError as e:
 		print(red+"Error starting Site...Error Code:",reset, e)
 

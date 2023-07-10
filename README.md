@@ -39,7 +39,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 4. Run the Script:
 `python3 restore_trial.py -s <sitename> -H <hostname/IP-Address>`
 
-**Note:** The script requires Python 3 to be installed on your system.
+**Note:** The script requires Python 3 to be installed on your system. The file restore_trial.py is the standalone script and the reset-trial-time.py is the script used by the service.
 
 ## Disclaimer
 
