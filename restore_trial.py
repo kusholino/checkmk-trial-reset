@@ -2,7 +2,7 @@ import argparse
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from scrapeSite import scrapeWeb, scrapeVers
-from colors import red, green, yellow, reset
+from colors import reset
 
 def main(site, host):
     print(bann)
@@ -11,7 +11,7 @@ def main(site, host):
     print("Checkmk Version:",scrapeVers(host, site))
     if site:
         if host:
-            
+
             with open("sitename", 'w') as file:
                 file.write(site)
 
