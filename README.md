@@ -41,6 +41,12 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 **Note:** The script requires Python 3 to be installed on your system. The file restore_trial.py is the standalone script and the reset-trial-time.py is the script used by the service.
 
+## Updating the repo
+
+Use the following command to update the script.
+
+`python3 restore_trial.py -u`
+
 ## Disclaimer
 
 This tool is provided for educational and testing purposes only. Use it responsibly and at your own risk. The author is of this tool is not responsible for any misuse or illegal activities caused by the usage of this tool. This tool is not affiliated with or endorsed by Checkmk.
