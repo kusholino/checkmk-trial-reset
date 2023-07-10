@@ -5,7 +5,7 @@ from colors import red, green, reset
 def install_beautifulsoup():
     try:
         subprocess.run(["apt-get", "install", "python3-pip3", "-y"])
-        subprocess.check_call(["pip2", "install", "beautifulsoup4", "-y"])
+        subprocess.check_call(["pip3", "install", "beautifulsoup4", "-y"])
         print("Beautiful Soup installed successfully.")
     except subprocess.CalledProcessError:
         print("Installation failed. Please make sure pip is installed and try again.")
