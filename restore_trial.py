@@ -3,12 +3,18 @@ from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from scrapeSite import scrapeWeb, scrapeVers
 from colors import reset
+from update import update
 
-def main(site, host):
+def main(site, host, update):
     print(bann)
     number = scrapeWeb(host, site)
     print("Remaining Time:", number+reset)
     print("Checkmk Version:",scrapeVers(host, site))
+
+    if update:
+        update()
+        print("Updated .... ",green+"OK", reset)
+        return
     if site:
         if host:
 
@@ -28,5 +34,6 @@ if __name__ == "__main__":
     parser =argparse.ArgumentParser(description="checkmk trial time reset script")
     parser.add_argument("-s", "--site", nargs = "?", const = True, help = "Enter the site name")
     parser.add_argument("-H", "--host", nargs = "?", const = True, help = "Enter Hostname or IP-Adress of the CheckMK Server")
+    parser.add_argument("-u", "--update", nargs = "?", const = True, help = "Update the git repo")
     args = parser.parse_args()
-    main(args.site, args.host)
+    main(args.site, args.host, args.update)
