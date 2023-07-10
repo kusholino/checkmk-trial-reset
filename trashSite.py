@@ -2,16 +2,29 @@ import subprocess
 from colors import red, green, reset
 
 def createSite():
-	subprocess.run(["omd", "create", "test"])
-	print("Created New Site ...", green+"OK", reset)
-	subprocess.run(["omd", "start", "test"])
-def copyFile(site):
-    file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
-    file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
+	try:
+		subprocess.run(["omd", "create", "test"], capture_output=True, text=True, check=True)
+		print("Created New Site ...", green+"OK", reset)
+	except subprocess.CalledProcessError as e:
+		print(red+"Error Creating Site...Error Code:",reset, e)
 
-    #copy the Time File
-    subprocess.run(["cp", "-r", file_source, file_destination])
-    print("Replaced File ......", green+"OK", reset)
+	try:
+		subprocess.run(["omd", "start", "test"], capture_output=True, text=True, check=True)
+	except subprocess.CalledProcessError as e:
+		print(red+"Error starting Site...Error Code:",reset, e)
+
+def copyFile(site):
+	file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
+	file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
+	
+	try:
+		subprocess.run(["cp", "-r", file_source, file_destination], capture_output=True, text=True, check=True)
+		print("Replaced File ......", green+"OK", reset)
+    
+	except subprocess.CalledProcessError as e:
+		print(red+"Error Replacing File ... Error Code:",reset, e)
+    
+    
 
 def rmSite():
 	command = f'omd rm test'
