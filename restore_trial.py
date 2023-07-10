@@ -1,10 +1,9 @@
 import argparse
+import time
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
 from scrapeSite import scrapeWeb, scrapeVers
 from colors import reset
-from update import update
-import sys
 
 def main(site, host):
     print(bann)
@@ -19,6 +18,7 @@ def main(site, host):
                 file.write(site)
 
                 createSite()
+                time.sleep(1)
                 copyFile(site)
                 rmSite()
                  

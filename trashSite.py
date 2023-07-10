@@ -18,8 +18,8 @@ def createSite():
 		print(red+"Error starting Site...Error Code:",reset, e)
 
 def copyFile(site):
-	file_destination = f'/root/{site}/var/check_mk/licensing/state_file_created'
-	file_source = f'/omd/sites/test/var/check_mk/licensing/state_file_created'
+	file_destination = f'/omd/{site}/var/check_mk/licensing/state_file_created'
+	file_source = '/omd/sites/test/var/check_mk/licensing/state_file_created'
 	
 	try:
 		#replacing the stae_file_created file
