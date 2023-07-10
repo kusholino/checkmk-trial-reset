@@ -1,14 +1,14 @@
 import argparse
 from banner import bann
 from trashSite import createSite, rmSite, copyFile
-from scrapeSite import scrapeWeb
-from version import version
+from scrapeSite import scrapeWeb, scrapeVers
+from colors import red, green, yellow, reset
 
 def main(site, host):
     print(bann)
-    print("Remaining Trial Time:", scrapeWeb(host, site))
-    print("Version:", version)
-
+    number = scrapeWeb(host, site)
+    print("Remaining Time:", number+reset)
+    print("Checkmk Version:",scrapeVers(host, site))
     if site:
         if host:
             
