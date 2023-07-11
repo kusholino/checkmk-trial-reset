@@ -29,7 +29,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 1. Clone the repository:
  
-    `git clone https://github.com/kusholino/checkmk-trial-reset`
+   `git clone https://github.com/kusholino/checkmk-trial-reset`
 
 3. Change into the project directory:
 `cd checkmk-trial-reset`
