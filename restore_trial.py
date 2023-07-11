@@ -22,7 +22,7 @@ def main(site, host):
                 copyFile(site)
                 rmSite()
                 number = scrapeWeb(host, site)
-                print("Remaining Time:", number+reset)
+                print("The time has been reset to:", number+reset)
                  
         else:
             print("No Host/IP was given. Use -H or --host")
