@@ -18,7 +18,7 @@ def createSite():	#creates throwaway site
 		print(red+"Error starting Site...Error Code:",reset, e)
 
 def copyFile(site):
-	file_destination = f'/omd/{site}/var/check_mk/licensing/state_file_created'	#file path of existing site
+	file_destination = f'/omd/sites/{site}/var/check_mk/licensing/state_file_created'	#file path of existing site
 	file_source = '/omd/sites/test/var/check_mk/licensing/state_file_created'	#file path of throwaway site
 	
 	try:

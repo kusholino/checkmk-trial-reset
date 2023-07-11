@@ -19,8 +19,16 @@ Please note that Checkmk Trial Reset should only be used for testing or evaluati
    `cd checkmk-trial-reset`
 
 3. Install dependencies:
+  
+   **Debian:** 
  
-   `python3 install-dependencies.py`
+   `python3 install-dependencies-debian.py`
+ 
+   **Ubuntu:**
+ 
+   `sudo -s`
+ 
+   `python3 install-dependencies-ubuntu.py`
 
 4. Run the Script:
  
@@ -41,7 +49,15 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 3. Install dependencies:
  
-   `python3 install-dependencies.py -s`
+   **Debian:** 
+ 
+   `python3 install-dependencies-debian.py -s`
+ 
+   **Ubuntu:**
+ 
+   `sudo -s`
+ 
+   `python3 install-dependencies-ubuntu.py -s`
 
 4. Run the Script:
  
@@ -78,7 +94,9 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
     - [ ] Service for automatic renewing the trial time
 
 ## Future Features
-    - [ ] Supports Ubuntu, Mint, RedHat
+    - [x] Supports Ubuntu
+    - [ ] Supports Mint
+    - [ ] Supports RedHat
 
 ## Disclaimer
 
