@@ -43,13 +43,14 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 1. Clone the repository:
  
    **Important**: Make sure to be in the root directory if you want to use the service!
+ 
    `git clone https://github.com/kusholino/checkmk-trial-reset`
 
-2. Change into the project directory:
+3. Change into the project directory:
  
    `cd checkmk-trial-reset`
 
-3. Install dependencies:
+4. Install dependencies:
  
    **Debian:** 
  
@@ -61,7 +62,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
  
    `python3 install-dependencies-ubuntu.py -s`
 
-4. Run the Script:
+5. Run the Script:
  
    `python3 restore_trial.py -s <sitename> -H <hostname/IP-Address>`
 
