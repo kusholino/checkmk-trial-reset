@@ -28,9 +28,8 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 **Note:** Run the Script normally atleast once so the service has the Informations it needs. (local site name and the time)
 
 1. Clone the repository:
-
  
-`git clone https://github.com/kusholino/checkmk-trial-reset`
+ `git clone https://github.com/kusholino/checkmk-trial-reset`
 
 3. Change into the project directory:
 `cd checkmk-trial-reset`
