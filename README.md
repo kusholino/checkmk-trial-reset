@@ -41,12 +41,27 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 **Note:** The script requires Python 3 to be installed on your system. The file restore_trial.py is the standalone script and the reset-trial-time.py is the script used by the service.
 
+## Manually Reseting the trial time
+
+1. Create a one time Site and start it:
+`omd create <any sitename>`
+`omd start <any sitename>`
+
+2. Replace the file:
+`cp /omd/<existing site>/var/check_mk/licensing/state_file_created /omd/<one time site>/var/check_mk/licensing/state_file_created`
+
+3. Remove the one time site and restart the existing site:
+`omd rm <any sitename>`
+`omd restart <existing site>`
+
+4. Give correct permissions:
+`chown <existing site user /omd/<existing site>`
+
 ## Tested Features
     - [x] Created Basic Script for Replacing the file
     - [x] Scraping to retrieve Version and Remaining Time
     - [x] Created install Dependency Script
     - [ ] Service for automatic renewing the trial time
-
 
 ## Disclaimer
 
