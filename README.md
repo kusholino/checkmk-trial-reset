@@ -12,6 +12,7 @@ Please note that Checkmk Trial Reset should only be used for testing or evaluati
 ## Installation without the Service
 1. Clone the repository:
  
+   **Important**: Make sure to be in the root directory if you want to use the service!
    `git clone https://github.com/kusholino/checkmk-trial-reset`
 
 2. Change into the project directory:
@@ -41,6 +42,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 1. Clone the repository:
  
+   **Important**: Make sure to be in the root directory if you want to use the service!
    `git clone https://github.com/kusholino/checkmk-trial-reset`
 
 2. Change into the project directory:
@@ -95,7 +97,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 ## Future Features
     - [x] Supports Ubuntu
-    - [ ] Supports Mint
+    - [ ] Supports SLES
     - [ ] Supports RedHat
 
 ## Disclaimer
