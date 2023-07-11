@@ -28,15 +28,17 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 **Note:** Run the Script normally atleast once so the service has the Informations it needs. (local site name and the time)
 
 1. Clone the repository:
+
+ 
 `git clone https://github.com/kusholino/checkmk-trial-reset`
 
-2. Change into the project directory:
+3. Change into the project directory:
 `cd checkmk-trial-reset`
 
-3. Install dependencies:
+4. Install dependencies:
 `python3 install-dependencies.py -s`
 
-4. Run the Script:
+5. Run the Script:
 `python3 restore_trial.py -s <sitename> -H <hostname/IP-Address>`
 
 **Note:** The script requires Python 3 to be installed on your system. The file restore_trial.py is the standalone script and the reset-trial-time.py is the script used by the service. This Script is only tested using a debian environment!
