@@ -54,18 +54,20 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 1. Create a one time Site and start it:
  
    `omd create <any sitename>`
+ 
    `omd start <any sitename>`
 
-2. Replace the file:
+3. Replace the file:
  
    `cp /omd/<existing site>/var/check_mk/licensing/state_file_created /omd/<one time site>/var/check_mk/licensing/state_file_created`
 
-3. Remove the one time site and restart the existing site:
+4. Remove the one time site and restart the existing site:
  
    `omd rm <any sitename>`
+ 
    `omd restart <existing site>`
 
-4. Give correct permissions:
+6. Give correct permissions:
  
    `chown <existing site user /omd/<existing site>`
 
