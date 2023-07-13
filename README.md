@@ -98,8 +98,6 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
 
 ## Future Features
     - [x] Supports Ubuntu
-    - [ ] Supports SLES
-    - [ ] Supports RedHat
 
 ## Disclaimer
 
