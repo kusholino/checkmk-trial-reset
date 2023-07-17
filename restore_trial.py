@@ -8,7 +8,7 @@ from colors import reset    #imports reset ascii code for the color reset used i
 def main(site, host):
     print(bann) #print banner
     number = scrapeWeb(host, site)  #gets remaining time
-    print("Remaining Time:", number+reset)  #prints remaining time 
+    print("Remaining Time:", number, reset)  #prints remaining time 
     print("Checkmk Version:",scrapeVers(host, site))    #gets version and prints it
 
     if site:    #if parameter site is used
