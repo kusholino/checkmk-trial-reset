@@ -94,9 +94,7 @@ The Service checks if the Remaining time fell below 15 days. If it did it automa
     - [x] Created Basic Script for Replacing the file
     - [x] Scraping to retrieve Version and Remaining Time
     - [x] Created install Dependency Script
-    - [ ] Service for automatic renewing the trial time
-
-## Future Features
+    - [x] Service for automatic renewing the trial time
     - [x] Supports Ubuntu
 
 ## Disclaimer

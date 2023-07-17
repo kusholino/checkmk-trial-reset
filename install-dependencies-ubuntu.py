@@ -16,11 +16,6 @@ def main(service):
     if service:
         try:
             subprocess.run(["cp", "reset-trial-time.service", "/etc/systemd/system"], capture_output=True, text=True, check=True)
-            subprocess.run(["cp", "cmk-reset-timer.service", "/etc/systemd/system"], capture_output=True, text=True, check=True)
-
-            subprocess.run(["systemctl", "enable", "cmk-reset-timer.service"], capture_output=True, text=True, check=True)
-            subprocess.run(["systemctl", "start", "cmk-reset-timer.service"], capture_output=True, text=True, check=True)
-
             subprocess.run(["systemctl", "enable", "reset-trial-time.service"], capture_output=True, text=True, check=True)
             subprocess.run(["systemctl", "start", "reset-trial-time.service"], capture_output=True, text=True, check=True)
             print("Installed Service ... ",green+"OK",reset)
