@@ -21,10 +21,10 @@ def scrapeWeb(host, site): #fetches remaining time
 			file.write(remaining_time)
 		numeric_part = ''.join(filter(str.isdigit, remaining_time))	#searches for digits in the string and saves them used for comparison
 		number = int(numeric_part)
-
-		if number >=20:		#visuals for printouts
+		
+		if number >= 20:		#visuals for printouts
 			return green+remaining_time
-		elif number <20 & number >= 10:
+		elif number < 20 and number >= 10:
 			return yellow+remaining_time
 		elif number < 10:
 			return red+remaining_time
