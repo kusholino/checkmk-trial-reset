@@ -4,6 +4,8 @@
 
 Checkmk Trial Reset works by copying the file, which is created when first starting a newly created site, where the encrypted date is saved. The script creates a one time site, which will be deleted after the process is completed. The newly created site has 30 days remaining in the trial. So the script just replaces the old file of your local site with the newly created date file. This tricks Checkmk into thinking the site has just been created.
 
+![Script Output] (checkmk-script.PNG)
+
 ### Details
 The date file is located in `/omd/sites/<localsitename>/check_mk/licensing/state_file_created` and is encrypted. You will **NOT** be able to copy the content or manipulate it, since its encrypted. You **NEED** to replace it how it is otherwise it wont work. In some cases you will need to give checkmk the permissions to read and write to the file so added it in the script. If you want to do it manually do not forget to restart your local site so the changes take action.
 
