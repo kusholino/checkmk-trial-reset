@@ -27,4 +27,3 @@ while True:
         command = f'restore_trial.py -H localhost -s {site}'
         subprocess.run([command], shell = True, text = True)
     time.sleep(10800)
-
